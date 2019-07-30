@@ -47,10 +47,10 @@
 		09C7E82B219AE7DD006E2F4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09C7E82C219AE7DD006E2F4B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		09C7E832219AE7DD006E2F4B /* RAC-第一课Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RAC-第一课Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		09C7E836219AE7DD006E2F4B /* RAC____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RAC____Tests.m; sourceTree = "<group>"; };
+		09C7E836219AE7DD006E2F4B /* RAC____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RAC____Tests.m"; sourceTree = "<group>"; };
 		09C7E838219AE7DD006E2F4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09C7E83D219AE7DD006E2F4B /* RAC-第一课UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RAC-第一课UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		09C7E841219AE7DD006E2F4B /* RAC____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RAC____UITests.m; sourceTree = "<group>"; };
+		09C7E841219AE7DD006E2F4B /* RAC____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RAC____UITests.m"; sourceTree = "<group>"; };
 		09C7E843219AE7DD006E2F4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09C7E852219B047F006E2F4B /* Pods_RAC_第一节.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = "Pods_RAC_第一节.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09C7E947219E55D0006E2F4B /* libPods-Last.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-Last.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +87,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		090E03A321C24ADD00BDFA75 /* 信号 */ = {
+			isa = PBXGroup;
+			children = (
+				09C7E820219AE7DC006E2F4B /* ViewController.h */,
+				09C7E821219AE7DC006E2F4B /* ViewController.m */,
+			);
+			path = "信号";
+			sourceTree = "<group>";
+		};
 		09C7E811219AE7DC006E2F4B = {
 			isa = PBXGroup;
 			children = (
@@ -114,8 +123,7 @@
 			children = (
 				09C7E81D219AE7DC006E2F4B /* AppDelegate.h */,
 				09C7E81E219AE7DC006E2F4B /* AppDelegate.m */,
-				09C7E820219AE7DC006E2F4B /* ViewController.h */,
-				09C7E821219AE7DC006E2F4B /* ViewController.m */,
+				090E03A321C24ADD00BDFA75 /* 信号 */,
 				09C7E823219AE7DC006E2F4B /* Main.storyboard */,
 				09C7E826219AE7DD006E2F4B /* Assets.xcassets */,
 				09C7E828219AE7DD006E2F4B /* LaunchScreen.storyboard */,
@@ -296,15 +304,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-RAC-第一课-checkManifestLockResult.txt",
 			);

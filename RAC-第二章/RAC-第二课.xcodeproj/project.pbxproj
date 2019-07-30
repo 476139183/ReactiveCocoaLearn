@@ -88,6 +88,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		090E03A421C24AFA00BDFA75 /* 数据解析 */ = {
+			isa = PBXGroup;
+			children = (
+				09C7E98E219E937E006E2F4B /* KFCModel.h */,
+				09C7E98F219E937E006E2F4B /* KFCModel.m */,
+				09C7E95C219E68A5006E2F4B /* ViewController.h */,
+				09C7E95D219E68A5006E2F4B /* ViewController.m */,
+			);
+			path = "数据解析";
+			sourceTree = "<group>";
+		};
 		09C7E94D219E68A5006E2F4B = {
 			isa = PBXGroup;
 			children = (
@@ -116,10 +127,7 @@
 				09C7E98C219E927D006E2F4B /* kfc.plist */,
 				09C7E959219E68A5006E2F4B /* AppDelegate.h */,
 				09C7E95A219E68A5006E2F4B /* AppDelegate.m */,
-				09C7E95C219E68A5006E2F4B /* ViewController.h */,
-				09C7E95D219E68A5006E2F4B /* ViewController.m */,
-				09C7E98E219E937E006E2F4B /* KFCModel.h */,
-				09C7E98F219E937E006E2F4B /* KFCModel.m */,
+				090E03A421C24AFA00BDFA75 /* 数据解析 */,
 				09C7E95F219E68A5006E2F4B /* Main.storyboard */,
 				09C7E962219E68A6006E2F4B /* Assets.xcassets */,
 				09C7E964219E68A6006E2F4B /* LaunchScreen.storyboard */,

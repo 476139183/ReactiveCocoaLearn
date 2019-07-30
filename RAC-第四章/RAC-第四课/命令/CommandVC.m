@@ -60,6 +60,8 @@
       NSLog(@"尚未开始或者已经结束了");
     }
     
+  } completed:^{
+    NSLog(@"completed");
   }];
   
   [[command execute:@"执行！"] subscribeNext:^(id  _Nullable x) {
