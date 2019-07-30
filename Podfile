@@ -13,17 +13,17 @@ target :'RAC-第一课' do
 end
 
 target :'RAC-第二课' do
-  project 'RAC-第二课/RAC-第二课.xcodeproj'
+  project 'RAC-第二章/RAC-第二课.xcodeproj'
 
 end
 
 target :'RAC-第三课' do
-  project 'RAC-第三课/RAC-第三课.xcodeproj'
+  project 'RAC-第三章/RAC-第三课.xcodeproj'
 
 end
 
 target :'RAC-第四课' do
-  project 'RAC-第四课/RAC-第四课.xcodeproj'
+  project 'RAC-第四章/RAC-第四课.xcodeproj'
 
 end
 
