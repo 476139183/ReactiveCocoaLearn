@@ -46,6 +46,9 @@
        * 只要源信号发送数据，即可调用这个block
        */
       NSLog(@"%@",value);
+      if ([value isKindOfClass:[NSString class]]) {
+        value = @"操作数据";
+      }
       return [RACReturnSignal return:value];
     };
   }];

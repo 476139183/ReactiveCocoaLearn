@@ -22,7 +22,7 @@
   self.title = @"RAC 简单用法";
   self.view.backgroundColor = [UIColor whiteColor];
 
-  //! 为了分门别类 这里就没用rac 处理
+  //! 为了分门别类 这里就没用 rac 处理
   
   NSArray *titleArray = @[@"事件触发",@"定时器",@"宏用法"];
   

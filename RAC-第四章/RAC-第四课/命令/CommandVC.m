@@ -30,7 +30,7 @@
 
   [self observeSignal];
   
-//  [self commandTest];
+ // [self commandTest];
 
 }
 
@@ -64,7 +64,7 @@
     NSLog(@"completed");
   }];
   
-  [[command execute:@"执行！"] subscribeNext:^(id  _Nullable x) {
+  [[command execute:@"执行！" ] subscribeNext:^(id  _Nullable x) {
     NSLog(@"%@",x);
   }];
 
@@ -72,6 +72,7 @@
   
 }
 
+///! 
 - (void)commandSecond {
   
   

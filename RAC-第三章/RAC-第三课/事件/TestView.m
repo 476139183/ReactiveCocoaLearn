@@ -80,7 +80,7 @@
 
 //! 按钮点击事件
 - (void)clickButton:(UIButton *)sender {
-
+  NSLog(@"调用了clickButton方法");
   [self endEditing:YES];
 }
 

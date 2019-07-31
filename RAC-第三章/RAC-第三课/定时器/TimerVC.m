@@ -54,7 +54,7 @@
 /*
  Block implicitly retains 'self'; explicitly mention 'self' to indicate this is intended behavior
  
- 我们可以发现，在定时器还在进行的时候，如果此时返回控制器，定时会继续执行，直到取消订阅，然后才会释放循环引用，释放当前控制器，所以我们应该在 viewDidDisappear 时 取消定位，终止循环引用释放VC
+ 我们可以发现，在定时器还在进行的时候，如果此时返回控制器，定时会继续执行，直到取消订阅，然后才会释放循环引用，释放当前控制器，所以我们应该在 viewDidDisappear 时 取消订阅，终止循环引用释放VC
  
  
  */

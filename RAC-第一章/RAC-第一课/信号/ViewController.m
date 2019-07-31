@@ -40,7 +40,7 @@
   }];
   
   /*  TODO: 2.订阅信号 调用 RACDynamicSignal 的 父亲类的 subscribeNext 方法，里面生成
-  RACSubscriber 对象，再调用 自己实现的 subscribe 发送信号的方法。调用创建信号时，保存的block
+  RACSubscriber 对象，再调用 自己实现的 subscribe 发送信号的方法。调用创建信号时，在保存的block
    发送信号之后， 返回 RACDisposable 对象
   */
   [signal subscribeNext:^(id  _Nullable x) {
