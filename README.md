@@ -194,7 +194,7 @@ NSString * filePath = [[NSBundle mainBundle] pathForResource:@"people.plist" ofT
     }];
 ```
 
-该方法并未写入到 Demo 里面去，在我app里面，因为 `UIImagePickerController` 的一些协议的遵守者要求是控制器，而我在进行开发的时候，使用了 `NSObject` 对象进行异步管理,故而采用了监听代码的方法去实现。
+该方法并未写入到 Demo 里面去，在我app里面，因为 `UIImagePickerController` 的一些协议的遵守者要求是控制器，而我在进行开发的时候，使用了 `NSObject` 对象进行异步管理,故而采用了监听代理的方法去实现。
 
 ### 定时器 ###
 
