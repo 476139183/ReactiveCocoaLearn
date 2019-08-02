@@ -249,7 +249,7 @@ NSString * filePath = [[NSBundle mainBundle] pathForResource:@"people.plist" ofT
 
 #### 栅栏信号 ####
 
-顾名思义，用于多个异步信号的处理，类似于 GCD 栅栏函数.比如我们首页有多个网络请求，需要所有数据拉去下来，客户端进行组装和处理才能展示页面，那么这个信号很适合。
+顾名思义，类似于 GCD 栅栏函数，特别适用于多个异步信号的处理，.
 
 核心代码如下
 
