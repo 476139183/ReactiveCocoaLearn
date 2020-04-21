@@ -26,7 +26,7 @@
 //! 基类信号 RACSignal
 - (void)signal {
   
-  //TODO: 1.创建信号 -> 返回的是子类 RACDynamicSignal 爆出 didSubscribe block
+  //TODO: 1.创建信号（冷信号） -> 返回的是子类 RACDynamicSignal 抛出 didSubscribe block
   RACSignal *signal = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
     //TODO: 3. 在主线程，RACSubscriber对象发送信号
     [subscriber sendNext:@"发送一个对象"];
@@ -39,14 +39,24 @@
     }];
   }];
   
-  /*  TODO: 2.订阅信号 调用 RACDynamicSignal 的 父亲类的 subscribeNext 方法，里面生成
+  /*  TODO: 2.订阅信号(热信号) 调用 RACDynamicSignal 的 父亲类的 subscribeNext 方法，里面生成
   RACSubscriber 对象，再调用 自己实现的 subscribe 发送信号的方法。调用创建信号时，在保存的block
    发送信号之后， 返回 RACDisposable 对象
   */
-  [signal subscribeNext:^(id  _Nullable x) {
-    // x 收到的信号
+  RACDisposable *disposable = [signal subscribeNext:^(id  _Nullable x) {
+    // x:收到的信号
     NSLog(@"收到的信号：%@",x);
   }];
+  
+  // 只要订阅者调用sendNext,就会执行nextBlock
+  // 只要订阅RACDynamicSignal,就会执行didSubscribe
+  // 前提条件是RACDynamicSignal,不同类型信号的订阅,处理订阅的事情不一样
+
+  /*
+   默认一个信号发送数据完毕们就会主动取消订阅,
+   如果信号被强持有，需要自己手动取消
+   [disposable dispose];
+   */
 
 }
 
@@ -65,7 +75,63 @@
   //遍历出所有的订阅者,调用nextBlock
   [subject sendNext:@"子类信号"];
   
+  // 执行流程:
+  
+  // RACSubject被订阅,仅仅是保存订阅者
+  // RACSubject发送数据,遍历所有的订阅,调用他们的nextBlock
+
 }
+
+///!  RACSubject 的子类
+- (void)replaySubject {
+  // 1.创建信号
+  RACReplaySubject *subject = [RACReplaySubject subject];
+  
+  // 2.订阅信号
+  [subject subscribeNext:^(id x) {
+    NSLog(@"%@",x);
+  }];
+  // 遍历所有的值,拿到当前订阅者去发送数据
+  
+  // 3.发送信号
+  [subject sendNext:@1];
+  //    [subject sendNext:@1];
+  // RACReplaySubject发送数据:
+  // 1.保存值
+  // 2.遍历所有的订阅者,发送数据
+  
+  
+  // RACReplaySubject:可以先发送信号,再订阅信号
+
+}
+
+/*
+ 
+ // RACSubject使用步骤
+ // 1.创建信号 [RACSubject subject]，跟RACSiganl不一样，创建信号时没有block。
+ // 2.订阅信号 - (RACDisposable *)subscribeNext:(void (^)(id x))nextBlock
+ // 3.发送信号 sendNext:(id)value
+ 
+ // RACSubject:底层实现和RACSignal不一样。
+ // 1.调用subscribeNext订阅信号，只是把订阅者保存起来，并且订阅者的nextBlock已经赋值了。
+ // 2.调用sendNext发送信号，遍历刚刚保存的所有订阅者，一个一个调用订阅者的nextBlock。
+
+ 
+ // RACReplaySubject使用步骤:
+ // 1.创建信号 [RACSubject subject]，跟RACSiganl不一样，创建信号时没有block。
+ // 2.可以先订阅信号，也可以先发送信号。
+ // 2.1 订阅信号 - (RACDisposable *)subscribeNext:(void (^)(id x))nextBlock
+ // 2.2 发送信号 sendNext:(id)value
+ 
+ // RACReplaySubject:底层实现和RACSubject不一样。
+ // 1.调用sendNext发送信号，把值保存起来，然后遍历刚刚保存的所有订阅者，一个一个调用订阅者的nextBlock。
+ // 2.调用subscribeNext订阅信号，遍历保存的所有值，一个一个调用订阅者的nextBlock
+ 
+ // 如果想当一个信号被订阅，就重复播放之前所有值，需要先发送信号，在订阅信号。
+ // 也就是先保存值，在订阅值。
+
+
+ */
 
 - (void)didReceiveMemoryWarning {
   [super didReceiveMemoryWarning];

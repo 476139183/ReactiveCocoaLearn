@@ -17,6 +17,9 @@
 		095A33E721A100F200C75CAC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 095A33E621A100F200C75CAC /* main.m */; };
 		095A33F221A1074200C75CAC /* FenceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 095A33F121A1074200C75CAC /* FenceVC.m */; };
 		095A33F521A10EB400C75CAC /* ConnecttionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 095A33F421A10EB400C75CAC /* ConnecttionVC.m */; };
+		09B452F5230BC57B0013B7FE /* MergeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B452F4230BC57B0013B7FE /* MergeVC.m */; };
+		09B452F9230BC6400013B7FE /* FilterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B452F8230BC6400013B7FE /* FilterVC.m */; };
+		09B452FD230BCDB00013B7FE /* MoreVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B452FC230BCDB00013B7FE /* MoreVC.m */; };
 		B3357B62FB66C10AF131810B /* libPods-RAC-第四课.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E5B0845588834A270DCE34E /* libPods-RAC-第四课.a */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +42,12 @@
 		095A33F121A1074200C75CAC /* FenceVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FenceVC.m; sourceTree = "<group>"; };
 		095A33F321A10EB400C75CAC /* ConnecttionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConnecttionVC.h; sourceTree = "<group>"; };
 		095A33F421A10EB400C75CAC /* ConnecttionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConnecttionVC.m; sourceTree = "<group>"; };
+		09B452F3230BC57B0013B7FE /* MergeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MergeVC.h; sourceTree = "<group>"; };
+		09B452F4230BC57B0013B7FE /* MergeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MergeVC.m; sourceTree = "<group>"; };
+		09B452F7230BC6400013B7FE /* FilterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilterVC.h; sourceTree = "<group>"; };
+		09B452F8230BC6400013B7FE /* FilterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilterVC.m; sourceTree = "<group>"; };
+		09B452FB230BCDB00013B7FE /* MoreVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoreVC.h; sourceTree = "<group>"; };
+		09B452FC230BCDB00013B7FE /* MoreVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoreVC.m; sourceTree = "<group>"; };
 		4F7A99C55D19C4E9FE4A3612 /* Pods-RAC-第四课.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RAC-第四课.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-RAC-第四课/Pods-RAC-第四课.debug.xcconfig"; sourceTree = "<group>"; };
 		560E228E4C4F004569322AC3 /* Pods-RAC-第四课.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RAC-第四课.release.xcconfig"; path = "../Pods/Target Support Files/Pods-RAC-第四课/Pods-RAC-第四课.release.xcconfig"; sourceTree = "<group>"; };
 		7E5B0845588834A270DCE34E /* libPods-RAC-第四课.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RAC-第四课.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +103,9 @@
 				095A33EE21A101B600C75CAC /* 多订阅 */,
 				095A33ED21A101AD00C75CAC /* 命令 */,
 				0939E2E621A1BFDD000DBE82 /* 绑定 */,
+				09B452F2230BC5480013B7FE /* 组合 */,
+				09B452F6230BC60D0013B7FE /* 过滤 */,
+				09B452FA230BCD800013B7FE /* 更多操作 */,
 				095A33DD21A100F200C75CAC /* Main.storyboard */,
 				095A33E021A100F200C75CAC /* Assets.xcassets */,
 				095A33E221A100F200C75CAC /* LaunchScreen.storyboard */,
@@ -128,6 +140,33 @@
 				095A33F121A1074200C75CAC /* FenceVC.m */,
 			);
 			path = "栅栏";
+			sourceTree = "<group>";
+		};
+		09B452F2230BC5480013B7FE /* 组合 */ = {
+			isa = PBXGroup;
+			children = (
+				09B452F3230BC57B0013B7FE /* MergeVC.h */,
+				09B452F4230BC57B0013B7FE /* MergeVC.m */,
+			);
+			path = "组合";
+			sourceTree = "<group>";
+		};
+		09B452F6230BC60D0013B7FE /* 过滤 */ = {
+			isa = PBXGroup;
+			children = (
+				09B452F7230BC6400013B7FE /* FilterVC.h */,
+				09B452F8230BC6400013B7FE /* FilterVC.m */,
+			);
+			path = "过滤";
+			sourceTree = "<group>";
+		};
+		09B452FA230BCD800013B7FE /* 更多操作 */ = {
+			isa = PBXGroup;
+			children = (
+				09B452FB230BCDB00013B7FE /* MoreVC.h */,
+				09B452FC230BCDB00013B7FE /* MoreVC.m */,
+			);
+			path = "更多操作";
 			sourceTree = "<group>";
 		};
 		65DA7FE894CFE7399BEFCDD1 /* Frameworks */ = {
@@ -242,9 +281,12 @@
 				095A33DC21A100F200C75CAC /* ViewController.m in Sources */,
 				095A33E721A100F200C75CAC /* main.m in Sources */,
 				095A33F221A1074200C75CAC /* FenceVC.m in Sources */,
+				09B452FD230BCDB00013B7FE /* MoreVC.m in Sources */,
 				0939E2E921A1C040000DBE82 /* BindVC.m in Sources */,
 				095A33D921A100F200C75CAC /* AppDelegate.m in Sources */,
+				09B452F5230BC57B0013B7FE /* MergeVC.m in Sources */,
 				0939E2E521A1ACC6000DBE82 /* CommandVC.m in Sources */,
+				09B452F9230BC6400013B7FE /* FilterVC.m in Sources */,
 				095A33F521A10EB400C75CAC /* ConnecttionVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
