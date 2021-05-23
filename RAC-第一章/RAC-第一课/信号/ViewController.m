@@ -26,10 +26,16 @@
 //! 基类信号 RACSignal
 - (void)signal {
   
-  //TODO: 1.创建信号（冷信号） -> 返回的是子类 RACDynamicSignal 抛出 didSubscribe block
+  //! TODO: 1.创建信号（冷信号） -> 返回的是子类 RACDynamicSignal 抛出 didSubscribe block
   RACSignal *signal = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
     //TODO: 3. 在主线程，RACSubscriber对象发送信号
     [subscriber sendNext:@"发送一个对象"];
+    
+    /* 也可以发送其他信号
+    NSError *error = [NSError errorWithDomain:NSURLErrorDomain code:404 userInfo:@{@"status":@"404"}];
+    [subscriber sendError:error];
+    [subscriber sendCompleted];
+    */
     
     return [RACDisposable disposableWithBlock:^{
       /* TODO: 信号自动销毁
@@ -39,7 +45,7 @@
     }];
   }];
   
-  /*  TODO: 2.订阅信号(热信号) 调用 RACDynamicSignal 的 父亲类的 subscribeNext 方法，里面生成
+  /*!  TODO: 2.订阅信号(热信号) 调用 RACDynamicSignal 的 父亲类的 subscribeNext 方法，里面生成
   RACSubscriber 对象，再调用 自己实现的 subscribe 发送信号的方法。调用创建信号时，在保存的block
    发送信号之后， 返回 RACDisposable 对象
   */
@@ -58,6 +64,14 @@
    [disposable dispose];
    */
 
+  //! 订阅错误信号
+  [signal subscribeError:^(NSError * _Nullable error) {
+    NSLog(@"接收error:%@",error);
+  }];
+  //! 订阅完成信号
+  [signal subscribeCompleted:^{
+    NSLog(@"接收完成信号");
+  }];
 }
 
 //! 信号子类 RACSubject
