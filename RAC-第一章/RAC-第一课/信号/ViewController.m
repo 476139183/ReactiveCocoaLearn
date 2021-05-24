@@ -65,13 +65,13 @@
    */
 
   //! 订阅错误信号
-  [signal subscribeError:^(NSError * _Nullable error) {
-    NSLog(@"接收error:%@",error);
-  }];
+//  [signal subscribeError:^(NSError * _Nullable error) {
+//    NSLog(@"接收error:%@",error);
+//  }];
   //! 订阅完成信号
-  [signal subscribeCompleted:^{
-    NSLog(@"接收完成信号");
-  }];
+//  [signal subscribeCompleted:^{
+//    NSLog(@"接收完成信号");
+//  }];
 }
 
 //! 信号子类 RACSubject
