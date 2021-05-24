@@ -13,29 +13,10 @@
 		09C7E963219E68A6006E2F4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09C7E962219E68A6006E2F4B /* Assets.xcassets */; };
 		09C7E966219E68A6006E2F4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09C7E964219E68A6006E2F4B /* LaunchScreen.storyboard */; };
 		09C7E969219E68A6006E2F4B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C7E968219E68A6006E2F4B /* main.m */; };
-		09C7E973219E68A6006E2F4B /* RAC____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C7E972219E68A6006E2F4B /* RAC____Tests.m */; };
-		09C7E97E219E68A6006E2F4B /* RAC____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C7E97D219E68A6006E2F4B /* RAC____UITests.m */; };
 		09C7E98D219E927D006E2F4B /* kfc.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09C7E98C219E927D006E2F4B /* kfc.plist */; };
 		09C7E990219E937E006E2F4B /* KFCModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C7E98F219E937E006E2F4B /* KFCModel.m */; };
 		B44C86059675B0D3FE3493BE /* libPods-RAC-第二课.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF240C0512EF45891105025C /* libPods-RAC-第二课.a */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		09C7E96F219E68A6006E2F4B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 09C7E94E219E68A5006E2F4B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 09C7E955219E68A5006E2F4B;
-			remoteInfo = "RAC-第二课";
-		};
-		09C7E97A219E68A6006E2F4B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 09C7E94E219E68A5006E2F4B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 09C7E955219E68A5006E2F4B;
-			remoteInfo = "RAC-第二课";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		09C7E956219E68A5006E2F4B /* RAC-第二课.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RAC-第二课.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,12 +29,6 @@
 		09C7E965219E68A6006E2F4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09C7E967219E68A6006E2F4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09C7E968219E68A6006E2F4B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		09C7E96E219E68A6006E2F4B /* RAC-第二课Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RAC-第二课Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		09C7E972219E68A6006E2F4B /* RAC____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RAC____Tests.m"; sourceTree = "<group>"; };
-		09C7E974219E68A6006E2F4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		09C7E979219E68A6006E2F4B /* RAC-第二课UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RAC-第二课UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		09C7E97D219E68A6006E2F4B /* RAC____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RAC____UITests.m"; sourceTree = "<group>"; };
-		09C7E97F219E68A6006E2F4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09C7E98C219E927D006E2F4B /* kfc.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = kfc.plist; sourceTree = "<group>"; };
 		09C7E98E219E937E006E2F4B /* KFCModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KFCModel.h; sourceTree = "<group>"; };
 		09C7E98F219E937E006E2F4B /* KFCModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KFCModel.m; sourceTree = "<group>"; };
@@ -68,20 +43,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B44C86059675B0D3FE3493BE /* libPods-RAC-第二课.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		09C7E96B219E68A6006E2F4B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		09C7E976219E68A6006E2F4B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,8 +64,6 @@
 			isa = PBXGroup;
 			children = (
 				09C7E958219E68A5006E2F4B /* RAC-第二课 */,
-				09C7E971219E68A6006E2F4B /* RAC-第二课Tests */,
-				09C7E97C219E68A6006E2F4B /* RAC-第二课UITests */,
 				09C7E957219E68A5006E2F4B /* Products */,
 				F22A1B5A6B76404EFE1CE46B /* Pods */,
 				A595FB4183702D712923DB81 /* Frameworks */,
@@ -115,8 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				09C7E956219E68A5006E2F4B /* RAC-第二课.app */,
-				09C7E96E219E68A6006E2F4B /* RAC-第二课Tests.xctest */,
-				09C7E979219E68A6006E2F4B /* RAC-第二课UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -135,24 +92,6 @@
 				09C7E968219E68A6006E2F4B /* main.m */,
 			);
 			path = "RAC-第二课";
-			sourceTree = "<group>";
-		};
-		09C7E971219E68A6006E2F4B /* RAC-第二课Tests */ = {
-			isa = PBXGroup;
-			children = (
-				09C7E972219E68A6006E2F4B /* RAC____Tests.m */,
-				09C7E974219E68A6006E2F4B /* Info.plist */,
-			);
-			path = "RAC-第二课Tests";
-			sourceTree = "<group>";
-		};
-		09C7E97C219E68A6006E2F4B /* RAC-第二课UITests */ = {
-			isa = PBXGroup;
-			children = (
-				09C7E97D219E68A6006E2F4B /* RAC____UITests.m */,
-				09C7E97F219E68A6006E2F4B /* Info.plist */,
-			);
-			path = "RAC-第二课UITests";
 			sourceTree = "<group>";
 		};
 		A595FB4183702D712923DB81 /* Frameworks */ = {
@@ -194,42 +133,6 @@
 			productReference = 09C7E956219E68A5006E2F4B /* RAC-第二课.app */;
 			productType = "com.apple.product-type.application";
 		};
-		09C7E96D219E68A6006E2F4B /* RAC-第二课Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 09C7E985219E68A6006E2F4B /* Build configuration list for PBXNativeTarget "RAC-第二课Tests" */;
-			buildPhases = (
-				09C7E96A219E68A6006E2F4B /* Sources */,
-				09C7E96B219E68A6006E2F4B /* Frameworks */,
-				09C7E96C219E68A6006E2F4B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				09C7E970219E68A6006E2F4B /* PBXTargetDependency */,
-			);
-			name = "RAC-第二课Tests";
-			productName = "RAC-第二课Tests";
-			productReference = 09C7E96E219E68A6006E2F4B /* RAC-第二课Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		09C7E978219E68A6006E2F4B /* RAC-第二课UITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 09C7E988219E68A6006E2F4B /* Build configuration list for PBXNativeTarget "RAC-第二课UITests" */;
-			buildPhases = (
-				09C7E975219E68A6006E2F4B /* Sources */,
-				09C7E976219E68A6006E2F4B /* Frameworks */,
-				09C7E977219E68A6006E2F4B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				09C7E97B219E68A6006E2F4B /* PBXTargetDependency */,
-			);
-			name = "RAC-第二课UITests";
-			productName = "RAC-第二课UITests";
-			productReference = 09C7E979219E68A6006E2F4B /* RAC-第二课UITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -241,14 +144,6 @@
 				TargetAttributes = {
 					09C7E955219E68A5006E2F4B = {
 						CreatedOnToolsVersion = 9.4;
-					};
-					09C7E96D219E68A6006E2F4B = {
-						CreatedOnToolsVersion = 9.4;
-						TestTargetID = 09C7E955219E68A5006E2F4B;
-					};
-					09C7E978219E68A6006E2F4B = {
-						CreatedOnToolsVersion = 9.4;
-						TestTargetID = 09C7E955219E68A5006E2F4B;
 					};
 				};
 			};
@@ -266,8 +161,6 @@
 			projectRoot = "";
 			targets = (
 				09C7E955219E68A5006E2F4B /* RAC-第二课 */,
-				09C7E96D219E68A6006E2F4B /* RAC-第二课Tests */,
-				09C7E978219E68A6006E2F4B /* RAC-第二课UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -281,20 +174,6 @@
 				09C7E963219E68A6006E2F4B /* Assets.xcassets in Resources */,
 				09C7E961219E68A5006E2F4B /* Main.storyboard in Resources */,
 				09C7E98D219E927D006E2F4B /* kfc.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		09C7E96C219E68A6006E2F4B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		09C7E977219E68A6006E2F4B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,36 +225,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		09C7E96A219E68A6006E2F4B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				09C7E973219E68A6006E2F4B /* RAC____Tests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		09C7E975219E68A6006E2F4B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				09C7E97E219E68A6006E2F4B /* RAC____UITests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		09C7E970219E68A6006E2F4B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 09C7E955219E68A5006E2F4B /* RAC-第二课 */;
-			targetProxy = 09C7E96F219E68A6006E2F4B /* PBXContainerItemProxy */;
-		};
-		09C7E97B219E68A6006E2F4B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 09C7E955219E68A5006E2F4B /* RAC-第二课 */;
-			targetProxy = 09C7E97A219E68A6006E2F4B /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		09C7E95F219E68A5006E2F4B /* Main.storyboard */ = {
@@ -543,80 +393,6 @@
 			};
 			name = Release;
 		};
-		09C7E986219E68A6006E2F4B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7TNL83WLRC;
-				INFOPLIST_FILE = "RAC-第二课Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "dyt.personalDemo.RAC----Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RAC-第二课.app/RAC-第二课";
-			};
-			name = Debug;
-		};
-		09C7E987219E68A6006E2F4B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7TNL83WLRC;
-				INFOPLIST_FILE = "RAC-第二课Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "dyt.personalDemo.RAC----Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RAC-第二课.app/RAC-第二课";
-			};
-			name = Release;
-		};
-		09C7E989219E68A6006E2F4B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7TNL83WLRC;
-				INFOPLIST_FILE = "RAC-第二课UITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "dyt.personalDemo.RAC----UITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "RAC-第二课";
-			};
-			name = Debug;
-		};
-		09C7E98A219E68A6006E2F4B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7TNL83WLRC;
-				INFOPLIST_FILE = "RAC-第二课UITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "dyt.personalDemo.RAC----UITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "RAC-第二课";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -634,24 +410,6 @@
 			buildConfigurations = (
 				09C7E983219E68A6006E2F4B /* Debug */,
 				09C7E984219E68A6006E2F4B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		09C7E985219E68A6006E2F4B /* Build configuration list for PBXNativeTarget "RAC-第二课Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				09C7E986219E68A6006E2F4B /* Debug */,
-				09C7E987219E68A6006E2F4B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		09C7E988219E68A6006E2F4B /* Build configuration list for PBXNativeTarget "RAC-第二课UITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				09C7E989219E68A6006E2F4B /* Debug */,
-				09C7E98A219E68A6006E2F4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

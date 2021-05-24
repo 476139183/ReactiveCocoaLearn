@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import <ReactiveObjC/ReactiveObjC.h>
+#import <ReactiveObjC/RACReturnSignal.h>
+
 #import "KFCModel.h"
 
 @interface ViewController ()
@@ -156,7 +158,8 @@
   //
   //        NSLog(@"%@",x);
   //    }];
-  [[signalOfsignals flattenMap:^RACStream *(id value) {
+    
+  [[signalOfsignals flattenMap:^__kindof RACStream *(id value) {
     return value;
     
   }] subscribeNext:^(id x) {
@@ -197,13 +200,14 @@
   RACSubject *subject = [RACSubject subject];
   
   // 绑定信号
-  RACSignal *bindSignal = [subject flattenMap:^RACStream *(id value) {
+  RACSignal *bindSignal = [subject flattenMap:^ __kindof RACStream *(id value) {
     // block:只要源信号发送内容就会调用
     // value:就是源信号发送内容
     
     value = [NSString stringWithFormat:@"xmg:%@",value];
     
     // 返回信号用来包装成修改内容值
+    
     return [RACReturnSignal return:value];
     
   }];
