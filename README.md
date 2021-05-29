@@ -9,30 +9,34 @@
 
 #### 1. 基类信号 `RACSignal`   
  
-  通过方法 `createSignal` 创建信号，传入一个 block1 ，在 进行信号订阅 时，使用方法 `subscribeNext` 进行消息的接收（订阅），但此时 `RACSignal ` 还是冷信号，需要在 block1 里面，使用 `RACSubscriber` 对象（订阅者）进行发送信号，我们称之为 `发送订阅信号`，方法为 `sendNext ` ，才可以使信号变成热信号，也就是可以接收到消息。        
+   通过方法 `createSignal` 创建信号，传入一个 block, 我们记为 `didSubscribe` ，在 `didSubscribe ` 里面，我们 使用 `RACSubscriber` 对象（订阅者）进行发送信号，我们称之为 `发送订阅信号`，方法为 `sendNext `。此时信号 为 **冷信号**。 只有我们在进行订阅时，才进行消息的发送。 而订阅方法 是 `subscribeNext`
   
   在这个基类信号中，我们可以看到signal中值的流向，以及监听signal的本质。各个block之间，一个扣着一个，代码的初始可读性可能比较难理解，但是真正理解之后，你会发现RAC真的很神奇。
   
 完整示例代码如下：  
 
 ```objc 
- //! TODO: 1.创建信号（冷信号） -> 返回的是子类 RACDynamicSignal 
+//! TODO: 1.创建信号（冷信号） -> 返回的是子类 RACDynamicSignal 
  //! 抛出 didSubscribe block
   RACSignal *signal = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
     //TODO: 3. 在主线程，使用 RACSubscriber 订阅者对象 发送信号
     [subscriber sendNext:@"发送一个对象"];
     
     return [RACDisposable disposableWithBlock:^{
-      /* TODO: 信号自动销毁
-       最后生成的 RACDisposable 会调用 销毁block，这一步发生在最后  addDisposable 方法里面
+      /* TODO: 
+      信号自动销毁
+      最后生成的 RACDisposable 会调用 销毁block，
+      这一步发生 在最后  addDisposable 方法里面
       */
       NSLog(@"信号销毁");
     }];
   }];
   
-  /*!  TODO: 2.订阅信号(热信号) 调用 RACDynamicSignal 的 父亲类的 subscribeNext 方法，里面生成
-  RACSubscriber 对象，再调用 自己实现的 subscribe 发送信号的方法。调用创建信号时，在保存的block
-   发送信号之后， 返回 RACDisposable 对象
+  /*!  
+  TODO: 2.订阅信号 调用 RACDynamicSignal 的 父亲类的 subscribeNext 方法，
+  里面生成 RACSubscriber 对象，
+  再调用 自己实现的 subscribe 发送信号的方法。调用创建信号时，在保存的block
+  发送信号之后， 返回 RACDisposable 对象
   */
   RACDisposable *disposable = [signal subscribeNext:^(id  _Nullable x) {
     // x:收到的信号
@@ -44,9 +48,31 @@
   
 #### 2. 信号子类 `RACSubject` 
  
-  子类将父类的方法进行封装后，我们一般使用 `[RACSubject subject]` 进行信号创建，同样使用`subscribeNext`进行消息的订阅，进行消息的接收，由于做了封装处理，我们可以随时在任何时机进行消息的发送，比如 `[subject sendNext:@"子类信号"]`.  
+子类将父类的方法进行封装后，我们一般使用 `[RACSubject subject]` 进行信号创建，同样使用`subscribeNext` 进行消息的订阅，进行消息的接收，由于做了封装处理，我们可以随时在任何时机进行消息的发送，比如 `[subject sendNext:@"子类信号"]`.  
+ 
+ 可以发现， `RACSubject` 继承了 `RACSubscriber ` 协议，所以  `RACSubject` 本身也可以发送信号，也就是说， `RACSubject` 既是订阅者也是发布者，它不需要订阅，也可以发送信号，所以它是 **热信号**
       
-  `RACSubject` 已经是常用的信号类了，比如 我们可以使用一个中间类持有 `RACSubject `,并在控制器类里面进行信号的创建，在中间类编写网络请求，在网络回调的时候，使用 `[subject sendNext:(id)(接收到的数据对象)]` 将数据发送到控制器处理。
+ `RACSubject` 已经是常用的信号类了，比如 我们可以使用一个中间类持有 `RACSubject `,并在控制器类里面进行信号的创建，在中间类编写网络请求，在网络回调的时候，使用 `[subject sendNext:(id)(接收到的数据对象)]` 将数据发送到控制器处理。
+
+> 不同于其父类，`RACSubject` 可 多次订阅
+
+使用代码如下：
+  
+```objc
+ //! 1. 创建信号，建立一个销毁对象和一个数组 _subscribers
+  RACSubject *subject = [RACSubject subject];
+  /* 2. 订阅信号, 调用父类方法，并重写里面的 subscribe 方法。
+      拿到之前的_subscribers 只保存这个订阅者，并未触发其他方法
+  */
+  [subject subscribeNext:^(id  _Nullable x) {
+    NSLog(@"接受到了数据:%@",x);
+  }];
+  
+  //!3. 发送数据
+  //遍历出所有的订阅者,调用nextBlock
+  [subject sendNext:@"子类信号"];
+ ```
+
   
 具体使用可以详见 `第一章` 的 工程 
 
